@@ -1,0 +1,9 @@
+<h1>Partitions</h1>
+<% form_tag :action => :partitions do%>
+<%= select_tag "n", options_for_select((1..@max).to_a) %>
+<%= submit_tag "Compute" %>
+<% end %>
+
+<% for line in @partitions do %>
+<p><%= line %></p>
+<% end %>
